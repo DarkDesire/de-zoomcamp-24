@@ -1,7 +1,7 @@
 FROM python:3.12.1
 
 RUN apt-get install wget
-RUN pip install pandas sqlalchemy psycopg2
+RUN pip install pandas sqlalchemy psycopg2 pyarrow
 
 WORKDIR /app
 COPY scripts/ingest_data.py ingest_data.py 

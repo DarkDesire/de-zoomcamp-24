@@ -12,20 +12,17 @@ def main(params):
     port = params.port
     db = params.db
     table = params.table
-    url = params.url
-    file_name = url.split('/')[-1]
-    
-    # download csv from URL using wget
-    os.system(f'wget {url} -O {file_name}')
+    uri = params.uri
+    file_name = uri.split('/')[-1]
 
     # postgresql://root:root@localhost:5432/ny_taxi
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
     if file_name.endswith('.parquet'):
-        pf = pq.read_table(file_name)
+        pf = pq.read_table(uri)
         data = pf.to_pandas()
     elif file_name.endswith('.csv') or file_name.endswith('.csv.gz'):
-        data = pd.read_csv(file_name, compression='infer')
+        data = pd.read_csv(uri, compression='infer')
     else:
         print(f'Unsupported file format: {file_name}')
         return
@@ -54,7 +51,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Ingest CSV data to Postgres')
 
-    #password, host, port, database name, table name, url of the csv
+    #password, host, port, database name, table name, uri of the csv
 
     parser.add_argument('--user', help='username')
     parser.add_argument('--password', help='password')
@@ -62,7 +59,7 @@ if __name__ == '__main__':
     parser.add_argument('--port', help='port number')
     parser.add_argument('--db', help='database name')
     parser.add_argument('--table', help='name of the tabler')
-    parser.add_argument('--url', help='url of the csv')                   
+    parser.add_argument('--uri', help='location of the csv')                   
 
     args = parser.parse_args()
 
