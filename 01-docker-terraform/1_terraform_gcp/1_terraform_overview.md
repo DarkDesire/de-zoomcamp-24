@@ -57,7 +57,7 @@
 
 
 ### Terraform Workshop to create GCP Infra
-Continue [here](2_gcp_overview)
+Continue [here](2_gcp_overview.md)
 
 
 ### References
