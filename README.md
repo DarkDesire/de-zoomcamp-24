@@ -35,8 +35,7 @@
 
 * [Homework](06-streaming/homework.md)
 
-
-### Overview
+### DE Zoomcamp 24 Course Overview
 ![overview.jpeg](overview.jpeg)
 
 [**Project**](project.md)
