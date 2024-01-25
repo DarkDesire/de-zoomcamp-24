@@ -45,4 +45,4 @@ For this course, we'll use a free version (upto EUR 300 credits).
    ```
  
 ### Terraform Workshop to create GCP Infra
-Continue [here](./1_terraform_overview)
+Continue [here](1_terraform_overview.md)
