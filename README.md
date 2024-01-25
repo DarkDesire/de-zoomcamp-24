@@ -36,6 +36,9 @@
 * [Homework](06-streaming/homework.md)
 
 
+### Overview
+![overview.jpeg](overview.jpeg)
+
 [**Project**](project.md)
 
 More information [here](project.md)
