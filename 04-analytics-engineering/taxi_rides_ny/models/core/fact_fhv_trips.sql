@@ -16,7 +16,8 @@ select
     fhv_tripdata.pickup_datetime,
     fhv_tripdata.dropoff_datetime,
     fhv_tripdata.sr_flag,
-    fhv_tripdata.affiliated_base_number
+    fhv_tripdata.affiliated_base_number,
+    fhv_tripdata.service_type
 from fhv_tripdata
 inner join
     dim_zones as pickup_zone on fhv_tripdata.pulocationid = pickup_zone.locationid
