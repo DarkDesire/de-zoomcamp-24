@@ -55,3 +55,6 @@ Hooray! Mage is up and running. Now, let's build a _real_ pipeline. In this sect
 Videos
 - 2.2.3a - [Configuring Postgres](https://www.youtube.com/watch?v=pmhI-ezd3BE&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
 - 2.2.3b - [Writing an ETL Pipeline](https://www.youtube.com/watch?v=Maidfe7oKLs&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
+
+
+* [2024 Homework](homework.md)
