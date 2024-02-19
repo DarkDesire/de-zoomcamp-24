@@ -52,7 +52,7 @@
 
 # Homework
 
-* [2024 Homework](./homework/homework.md)
+* [2024 Homework](homework.md)
 
 # Community notes
 
