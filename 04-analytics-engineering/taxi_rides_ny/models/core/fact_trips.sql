@@ -1,6 +1,9 @@
 {{ config(materialized="table") }}
 
 with
+    fhv_tripdata as (
+        select *, 'FHV' as service_type from {{ ref("stg_fhv_tripdata") }}
+    ),
     green_tripdata as (
         select *, 'Green' as service_type from {{ ref("stg_green_tripdata") }}
     ),
@@ -13,6 +16,9 @@ with
         union all
         select *
         from yellow_tripdata
+        union all
+        select *
+        from fhv_tripdata
     ),
     dim_zones as (select * from {{ ref("dim_zones") }} where borough != 'Unknown')
 select
