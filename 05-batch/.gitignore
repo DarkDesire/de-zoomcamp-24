@@ -1,0 +1,7 @@
+env/
+*.csv
+*.parquet
+*.gz
+hw/
+spark-warehouse/
+04_pyspark/
